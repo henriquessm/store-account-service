@@ -8,7 +8,7 @@ pipeline {
     
     environment {
         SERVICE = 'account'
-        NAME = "tpenha05/${env.SERVICE}"
+        NAME = "henriquessm/${env.SERVICE}"
         REGISTRY_CREDENTIALS = 'dockerhub-credentials'
     }
     
@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     dir('libs/account') {
-                        git branch: 'main', url: 'https://github.com/tpenha05/store-account.git'
+                        git branch: 'main', url: 'https://github.com/henriquessm/store-account.git'
                         sh 'mvn clean install -DskipTests'
                     }
                 }
